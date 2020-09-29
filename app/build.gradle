@@ -11,6 +11,11 @@ apply plugin: 'kotlin-platform-android'
 android {
     compileSdkVersion 29
     buildToolsVersion '29.0.3'
+
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId 'com.eltaher.task'
         minSdkVersion 21
@@ -21,9 +26,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "com.task.CustomTestRunner"
     }
-    buildFeatures{
-         viewBinding = true
-    }
+
     buildTypes {
         debug {
             debuggable true
